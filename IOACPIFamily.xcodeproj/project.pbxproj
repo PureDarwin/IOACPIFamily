@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FDFAE89238B73F0009C79B7 /* IOACPIFamily.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FDFAE88238B73F0009C79B7 /* IOACPIFamily.c */; };
+		1FDFAE90238B7411009C79B7 /* IOACPIInlineIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8A238B7410009C79B7 /* IOACPIInlineIO.h */; };
+		1FDFAE91238B7411009C79B7 /* IOACPIPlatformDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8B238B7410009C79B7 /* IOACPIPlatformDevice.h */; };
+		1FDFAE92238B7411009C79B7 /* IOACPIPlatformExpert.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8C238B7410009C79B7 /* IOACPIPlatformExpert.h */; };
+		1FDFAE93238B7411009C79B7 /* IOACPIPlatformExpert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDFAE8D238B7410009C79B7 /* IOACPIPlatformExpert.cpp */; };
+		1FDFAE94238B7411009C79B7 /* IOACPITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8E238B7411009C79B7 /* IOACPITypes.h */; };
+		1FDFAE95238B7411009C79B7 /* IOACPIPlatformDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDFAE8F238B7411009C79B7 /* IOACPIPlatformDevice.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F6D5595238B737000FAE179 /* IOACPIFamily.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOACPIFamily.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6D559A238B737000FAE179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FDFAE88238B73F0009C79B7 /* IOACPIFamily.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IOACPIFamily.c; sourceTree = "<group>"; };
+		1FDFAE8A238B7410009C79B7 /* IOACPIInlineIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOACPIInlineIO.h; sourceTree = "<group>"; };
+		1FDFAE8B238B7410009C79B7 /* IOACPIPlatformDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOACPIPlatformDevice.h; sourceTree = "<group>"; };
+		1FDFAE8C238B7410009C79B7 /* IOACPIPlatformExpert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOACPIPlatformExpert.h; sourceTree = "<group>"; };
+		1FDFAE8D238B7410009C79B7 /* IOACPIPlatformExpert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOACPIPlatformExpert.cpp; sourceTree = "<group>"; };
+		1FDFAE8E238B7411009C79B7 /* IOACPITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOACPITypes.h; sourceTree = "<group>"; };
+		1FDFAE8F238B7411009C79B7 /* IOACPIPlatformDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOACPIPlatformDevice.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +40,12 @@
 		1F6D5589238B735800FAE179 = {
 			isa = PBXGroup;
 			children = (
-				1FDFAE88238B73F0009C79B7 /* IOACPIFamily.c */,
+				1FDFAE8A238B7410009C79B7 /* IOACPIInlineIO.h */,
+				1FDFAE8F238B7411009C79B7 /* IOACPIPlatformDevice.cpp */,
+				1FDFAE8B238B7410009C79B7 /* IOACPIPlatformDevice.h */,
+				1FDFAE8D238B7410009C79B7 /* IOACPIPlatformExpert.cpp */,
+				1FDFAE8C238B7410009C79B7 /* IOACPIPlatformExpert.h */,
+				1FDFAE8E238B7411009C79B7 /* IOACPITypes.h */,
 				1F6D559A238B737000FAE179 /* Info.plist */,
 				1F6D5596238B737000FAE179 /* Products */,
 			);
@@ -51,6 +66,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDFAE92238B7411009C79B7 /* IOACPIPlatformExpert.h in Headers */,
+				1FDFAE94238B7411009C79B7 /* IOACPITypes.h in Headers */,
+				1FDFAE91238B7411009C79B7 /* IOACPIPlatformDevice.h in Headers */,
+				1FDFAE90238B7411009C79B7 /* IOACPIInlineIO.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FDFAE89238B73F0009C79B7 /* IOACPIFamily.c in Sources */,
+				1FDFAE93238B7411009C79B7 /* IOACPIPlatformExpert.cpp in Sources */,
+				1FDFAE95238B7411009C79B7 /* IOACPIPlatformDevice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
