@@ -309,7 +309,7 @@ IOReturn IOACPIPlatformDevice::evaluateInteger( const OSSymbol * objectName,
     if ( ret == kIOReturnSuccess )
     {
         OSNumber * num;
-        if ((num = OSDynamicCast(OSNumber, obj)))
+        if ((num = OSDynamicCast(OSNumber, obj)) != nullptr)
             *resultInt64 = num->unsigned64BitValue();
         else
             ret = kIOReturnBadArgument;
@@ -333,7 +333,7 @@ IOReturn IOACPIPlatformDevice::evaluateInteger( const char *  objectName,
     if ( ret == kIOReturnSuccess )
     {
         OSNumber * num;
-        if ((num = OSDynamicCast(OSNumber, obj)))
+        if ((num = OSDynamicCast(OSNumber, obj)) != nullptr)
             *resultInt64 = num->unsigned64BitValue();
         else
             ret = kIOReturnBadArgument;
@@ -357,7 +357,7 @@ IOReturn IOACPIPlatformDevice::evaluateInteger( const OSSymbol * objectName,
     if ( ret == kIOReturnSuccess )
     {
         OSNumber * num;
-        if ((num = OSDynamicCast(OSNumber, obj)))
+        if ((num = OSDynamicCast(OSNumber, obj)) != nullptr)
             *resultInt32 = num->unsigned32BitValue();
         else
             ret = kIOReturnBadArgument;
@@ -381,7 +381,7 @@ IOReturn IOACPIPlatformDevice::evaluateInteger( const char *  objectName,
     if ( ret == kIOReturnSuccess )
     {
         OSNumber * num;
-        if ((num = OSDynamicCast(OSNumber, obj)))
+        if ((num = OSDynamicCast(OSNumber, obj)) != nullptr)
             *resultInt32 = num->unsigned32BitValue();
         else
             ret = kIOReturnBadArgument;
