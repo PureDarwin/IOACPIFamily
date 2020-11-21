@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FDFAE90238B7411009C79B7 /* IOACPIInlineIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8A238B7410009C79B7 /* IOACPIInlineIO.h */; };
-		1FDFAE91238B7411009C79B7 /* IOACPIPlatformDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8B238B7410009C79B7 /* IOACPIPlatformDevice.h */; };
-		1FDFAE92238B7411009C79B7 /* IOACPIPlatformExpert.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8C238B7410009C79B7 /* IOACPIPlatformExpert.h */; };
+		1FDFAE90238B7411009C79B7 /* IOACPIInlineIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8A238B7410009C79B7 /* IOACPIInlineIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FDFAE91238B7411009C79B7 /* IOACPIPlatformDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8B238B7410009C79B7 /* IOACPIPlatformDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FDFAE92238B7411009C79B7 /* IOACPIPlatformExpert.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8C238B7410009C79B7 /* IOACPIPlatformExpert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FDFAE93238B7411009C79B7 /* IOACPIPlatformExpert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDFAE8D238B7410009C79B7 /* IOACPIPlatformExpert.cpp */; };
-		1FDFAE94238B7411009C79B7 /* IOACPITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8E238B7411009C79B7 /* IOACPITypes.h */; };
+		1FDFAE94238B7411009C79B7 /* IOACPITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDFAE8E238B7411009C79B7 /* IOACPITypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FDFAE95238B7411009C79B7 /* IOACPIPlatformDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDFAE8F238B7411009C79B7 /* IOACPIPlatformDevice.cpp */; };
 /* End PBXBuildFile section */
 
