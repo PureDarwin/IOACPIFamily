@@ -20,6 +20,11 @@
  * @APPLE_LICENSE_HEADER_END@
  */
 
+/*
+* Per 2.2 of APSL Code Updated by PureDarwin Maintainer CSekel 
+*
+*/
+
 #include <IOKit/IOLib.h>
 #include <IOKit/acpi/IOACPIPlatformDevice.h>
 #include <IOKit/acpi/IOACPIPlatformExpert.h>
@@ -584,6 +589,18 @@ IOReturn IOACPIPlatformDevice::setPowerState( unsigned long stateIndex,
 //---------------------------------------------------------------------------
 // FIXME: verify that the range is tagged as I/O?
 
+UInt32 IOACPIPlatformDevice::ioRead64( UInt16 offset, IOMemoryMap * map )
+{
+    UInt64  value;
+    UInt16  base = 0;
+
+    if (map) base = map->getPhysicalAddress();
+
+    value = inl( base + offset );
+
+    return (value);
+}
+
 UInt32 IOACPIPlatformDevice::ioRead32( UInt16 offset, IOMemoryMap * map )
 {
     UInt32  value;
@@ -618,6 +635,16 @@ UInt8 IOACPIPlatformDevice::ioRead8( UInt16 offset, IOMemoryMap * map )
     value = inb( base + offset );
 
     return (value);
+}
+
+void IOACPIPlatformDevice::ioWrite64( UInt16 offset, UInt64 value,
+                                      IOMemoryMap * map )
+{
+    UInt16 base = 0;
+
+    if (map) base = map->getPhysicalAddress();
+
+    outl( base + offset, value );
 }
 
 void IOACPIPlatformDevice::ioWrite32( UInt16 offset, UInt32 value,
