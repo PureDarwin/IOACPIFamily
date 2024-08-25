@@ -26,7 +26,7 @@
 #include <IOKit/IOPlatformExpert.h>           // superclass
 #include <IOKit/acpi/IOACPIPlatformDevice.h>  // children
 
-class IOACPIPlatformExpert : public IODTPlatformExpert
+class __exported IOACPIPlatformExpert : public IODTPlatformExpert
 {
     OSDeclareAbstractStructors( IOACPIPlatformExpert )
 
@@ -45,7 +45,7 @@ protected:
     ExpansionData *  reserved;
 
 public:
-    virtual bool     start( IOService * provider );
+    virtual bool     start( IOService * provider ) APPLE_KEXT_OVERRIDE;
 
 protected:
     // Map ACPI event to interrupt event source index
