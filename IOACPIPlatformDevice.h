@@ -29,7 +29,7 @@
 
 class IOACPIPlatformExpert;
 
-class IOACPIPlatformDevice : public IOPlatformDevice
+class __exported IOACPIPlatformDevice : public IOPlatformDevice
 {
     OSDeclareDefaultStructors( IOACPIPlatformDevice )
 
@@ -42,14 +42,14 @@ protected:
     IOService *            _acpiParent;
     IOACPIPlatformExpert * _platform;
 
-    /*! @struct ExpansionData
-        @discussion This structure will be used to expand the capablilties
-                    of the class in the future.
+    /* 
+     * This structure will be used to expand the capablilties
+     * of the class in the future.
      */
     struct ExpansionData { };
 
-    /*! @var reserved
-        Reserved for future use. (Internal use only)
+    /*
+     * Reserved for future use. (Internal use only)
      */
     ExpansionData *  reserved;
 
@@ -61,21 +61,21 @@ public:
                            void *         handle,
                            OSDictionary * properties );
 
-    virtual void     free( void );
+    virtual void     free( void ) APPLE_KEXT_OVERRIDE;
 
     virtual bool     attachToParent( IORegistryEntry * parent,
-                                     const IORegistryPlane * plane );
+                                     const IORegistryPlane * plane ) APPLE_KEXT_OVERRIDE;
 
     virtual void     detachFromParent( IORegistryEntry * parent,
-                                       const IORegistryPlane * plane );
+                                       const IORegistryPlane * plane ) APPLE_KEXT_OVERRIDE;
 
     virtual bool     getPathComponent( char * path, int * length,
-                                       const IORegistryPlane * plane ) const;
+                                       const IORegistryPlane * plane ) const APPLE_KEXT_OVERRIDE;
 
     virtual bool     compareName( OSString *  name,
-                                  OSString ** matched ) const;
+                                  OSString ** matched ) const APPLE_KEXT_OVERRIDE;
 
-    virtual IOReturn getResources( void );
+    virtual IOReturn getResources( void ) APPLE_KEXT_OVERRIDE;
 
     virtual void *   getDeviceHandle( void ) const;
 
@@ -196,7 +196,7 @@ public:
                             IOOptionBits options    = 0 );
 
     virtual IOReturn setPowerState( unsigned long powerState,
-                                    IOService * whatDevice );
+                                    IOService * whatDevice ) APPLE_KEXT_OVERRIDE;
 
     // I/O space helpers
 
